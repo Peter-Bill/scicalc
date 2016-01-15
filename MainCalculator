@@ -1,0 +1,91 @@
+import java.lang.Math;
+import java.util.Scanner;
+
+public class MainCalculator {
+	
+	private double num1;
+	private double num2;
+	private double finalAnswer;
+	private int pick;
+	
+	Scanner input = new Scanner (System.in);
+	
+	public MainCalculator () {
+		
+		num1 = 0;
+		num2 = 0;
+		finalAnswer = 0;
+		pick = 0;
+		
+	}
+	
+	public void testCalc () { 
+		
+		System.out.println("number 1");
+		num1 = input.nextDouble();
+		
+		System.out.println("number 2");
+		num2 = input.nextDouble();
+		
+		System.out.println("What function would you like to use");
+				
+		System.out.println("1. Addition\n" + "2. Subtraction\n" + "3. Multiplication\n" + "4. Division\n" + "5. Root\n" + "6. Modulus\n" + "7. x^2\n");
+		pick = input.nextInt();
+		
+	}
+	
+	public double Addition () {
+		
+		finalAnswer = (num1 + num2); 
+		
+		return finalAnswer;
+		
+	}
+	
+	public double Subtraction () {
+		
+		finalAnswer = (num1 - num2);
+		
+		return finalAnswer;
+		
+	}
+	
+	public double Multiplication () {
+		
+		finalAnswer = (num1 * num2);
+		
+		return finalAnswer;
+		
+	}
+	
+	public double Division () {
+		
+		finalAnswer = (num1 / num2);
+		
+		return finalAnswer;
+	}
+	
+	public double Root () {
+		
+		finalAnswer = Math.sqrt(num1);
+		
+		return finalAnswer;
+	}
+	
+	public double Modulus () {
+		
+		finalAnswer = (num1 % num2);
+
+		return finalAnswer;
+		
+	}
+	
+	public double sqr () {
+		
+		finalAnswer = (num1 * num1);
+		
+		return finalAnswer;
+		
+	}
+	
+}
